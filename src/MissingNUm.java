@@ -34,7 +34,15 @@ return -1;
 return  -1;
     }
 
-
+    public static  int missingNumOptimal(int[] arr){
+        int n = arr.length;
+        int sum = (n  *(n+1))/2;
+        int s2 = 0 ;
+        for(int i = 0 ; i < n; i++){
+            s2 = s2+ arr[i];
+        }
+        return sum-s2;
+    }
 
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
@@ -42,12 +50,15 @@ return  -1;
                 .mapToInt(Integer::parseInt)
                 .toArray();
 
-        int n = sc.nextInt();
+//        int n = sc.nextInt();
 
 //        missingNumBrute(arr);
 
-        int result = missingNumBetter(arr , n);
-        System.out.println("the missing num using better approach is:"+ result);
+//        int result = missingNumBetter(arr , n);
+//        System.out.println("the missing num using better approach is:"+ result);
+
+        int result2 = missingNumOptimal(arr);
+        System.out.println("the missing num using optimal approach is:"+ result2);
 
 
 
