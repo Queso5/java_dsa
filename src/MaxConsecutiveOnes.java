@@ -4,7 +4,7 @@ public class MaxConsecutiveOnes {
     public static int findMaxConsecutiveOnes(int[] arr){
         int max = 0 ;
         int cnt = 0 ;
-        for(int i = 1; i < arr.length; i++){
+        for(int i = 0; i < arr.length; i++){
             if(arr[i]== 1){
                 cnt++;
                 max= Math.max(cnt, max);
