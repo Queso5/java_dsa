@@ -49,6 +49,6 @@ public class FloorandCeil {
 
         int resultfloor = floor(arr , target);
         int resultceil = ceil(arr, target);
-        System.out.println(" the floor and the ceil for the target is:"+ resultfloor + "and"+ resultceil);
+        System.out.println(" the floor and the ceil for the target is:"+ resultfloor + " and "+ resultceil);
     }
 }
