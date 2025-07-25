@@ -2,18 +2,20 @@ import java.util.Arrays;
 import java.util.Scanner;
 public class LongestSubarraySumk {
     public static int longSubArrSumKBrute(int[] arr, int k ){
-        for(int i = 0 ; i < arr.length; i++){
-            int sum = 0 ;
-            for(int j = i; j < arr.length; j++){
-                int len = 0 ;
-                sum = sum+ arr[j];
-                if(sum == k ){
-                    len = Math.max(len, j-i+1);
-                    return len;
+        int n = arr.length;
+        int len = 0;
+        for(int i = 0 ; i < n ; i++){
+            for(int j = i ; j < n ; j++){
+                long sum = 0;
+                for(int  l = i ; l <= j ; l++){
+                    sum += arr[l];
+                }
+                if( sum ==  k){
+                    len = Math.max(len , j-i+1);
                 }
             }
         }
-return -1;
+        return  len;
     }
 
     public static void main(String[] args){
