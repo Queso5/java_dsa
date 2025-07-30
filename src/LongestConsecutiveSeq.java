@@ -19,8 +19,9 @@ public class LongestConsecutiveSeq {
             while(LinearSearch(nums , x ) == true){
                 x = x + 1;
                 cnt = cnt + 1;
-                longest = Math.max(cnt , longest);
+
             }
+            longest = Math.max(cnt , longest);
 
         }
         return longest;
