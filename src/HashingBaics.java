@@ -1,50 +1,111 @@
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Map;
 
 public class HashingBaics {
     public static void main(String[] args){
-        //defining a HashSet
-        HashSet<Integer> myHashSet = new HashSet<>();
-
-        //operations on HashSet
-        // - adding elements to the hashSet
-        myHashSet.add(12);
-        myHashSet.add(13);
-
-        //search elements in the hashSet
-        myHashSet.contains(12);
+        //import HashSet
+        //import Iterator
+        //does not contain duplicates
+        //defining a set
+        HashSet<Integer> mySet = new HashSet<>();
 
 
-        //remove elements from hashSet
-//        myHashSet.remove(13);
+        //add elements to the set
+        mySet.add(1);
+        mySet.add(2);
+        mySet.add(3);
+        mySet.add(1);
 
-        //iterate thru a HashSet
-        int iter = myHashSet.iterator().next();
-        System.out.println(iter);
 
+        //get the size of the set
+        System.out.println(mySet.size());
 
-        //HasMap
+        System.out.println(mySet);
 
-        //defining a HashMap
-        HashMap<String, Integer> myHashMap = new HashMap<>();
+        //search for elements
+        System.out.println(mySet.contains(1));
 
-        // inset in hashMap
-        myHashMap.put("Mango" , 50 );
-        myHashMap.put("apple", 30);
-        myHashMap.put("banana", 20);
+        //remove elements
+        mySet.remove(1);
 
-        System.out.println(myHashMap);
-
-        //removing an element from the hashmap
-        myHashMap.remove("banana" );
-        System.out.println(myHashMap);
-
-        //check is key present;
-        if(myHashMap.containsKey("peach")){
-            System.out.println("true");
-        }else {
-            System.out.println("false");
+        //iteraton
+        Iterator it = mySet.iterator();
+        while(it.hasNext()){
+            System.out.println(it.next());
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//        //HasMap
+//
+//        //defining a HashMap
+//        HashMap<String, Integer> myHashMap = new HashMap<>();
+//
+//        // inset in hashMap
+//        myHashMap.put("Mango" , 50 );
+//        myHashMap.put("apple", 30);
+//        myHashMap.put("banana", 20);
+//
+//        //if the key is alrady present in the hashmap the value of the key will be updated
+//
+//        System.out.println(myHashMap);
+//
+//        //removing an element from the hashmap
+//        myHashMap.remove("banana" );
+//        System.out.println(myHashMap);
+//
+//        //check is key present;
+//        if(myHashMap.containsKey("peach")){
+//            System.out.println("true");
+//        }else {
+//            System.out.println("false");
+//        }
+//
+//        //get the value of a key
+//        System.out.println(myHashMap.get("Mango"));
+//        //if the key doesnt exist it will return null
+//
+//
+//        //how to directly iterate between the value of the array
+//        int[] arr = {1 ,2,3,4,5,6};
+//        for(int val : arr){
+//            System.out.println(val + " "); // only access the values of the arr not the index
+//        }
+//
+//
+//        HashMap<String, Integer> mpp = new HashMap<>();
+//        mpp.put("India", 12);
+//        mpp.put("USA", 10);
+//        mpp.put("China", 9);
+//
+//        for(Map.Entry<String, Integer> it : mpp.entrySet()){
+//            System.out.println(it.getKey());
+//            System.out.println(it.getValue());
+//        }
+//        mpp.remove("China");
+//        System.out.println(mpp);
+//
 
 
     }
