@@ -19,9 +19,13 @@ public class ElementAppearOnce {
 
     public static int printEleAppearOnceBetter(int[] arr){
         int max = 0 ;
-        for(int i = 0 ; i < arr.length; i++){
-            max = Math.max(max , arr[i]);
+        for(int i = 0 ; i < arr.length; i++) {
+            max = Math.max(max, arr[i]);
         }
+
+
+
+
 
         int[] hash = new int[max+1];
 
@@ -38,12 +42,12 @@ public class ElementAppearOnce {
         return -1;
     }
 
-    public static int printEleAppearOnceOptimal(int[] arr){
-        int xor = 0 ;
-        for(int i = 0 ; i < arr.length; i++){
-            xor = xor^arr[i];
+    public static int printEleAppearOnceOptimal(int[] arr) {
+        int xor = 0;
+        for (int i = 0; i < arr.length; i++) {
+            xor = xor ^ arr[i];
         }
-        return  xor;
+        return xor;
     }
 
 
